@@ -1,0 +1,12 @@
+{
+  "name": "마음 가계부",
+  "short_name": "마음가계부",
+  "description": "인지심리학 원리를 반영한 입출금 가계부",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#F2F5F3",
+  "theme_color": "#1B4D3E",
+  "icons": [
+    { "src": "./favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
