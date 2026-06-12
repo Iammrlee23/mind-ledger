@@ -2,6 +2,8 @@
 
 인지심리학 원리를 설계에 반영한 입출금 가계부 웹앱입니다.
 
+**라이브 데모: https://iammrlee23.github.io/mind-ledger/** (GitHub Pages, `gh-pages` 브랜치)
+
 | 원리 | 적용 위치 |
 |---|---|
 | 손실 회피 (Loss Aversion) | "오늘" 탭 — 쓴 돈이 아닌 **남은 돈** 중심 표시, 줄어드는 게이지 |
@@ -64,15 +66,20 @@ npm run build
 netlify deploy --prod --dir=dist
 ```
 
-### 3) GitHub Pages
+### 3) GitHub Pages (현재 배포 방식)
 
-1. `vite.config.js`에서 `base: "/저장소이름/"` 으로 변경
+1. `vite.config.js`에서 `base: "/저장소이름/"` 으로 변경 (현재 `/mind-ledger/` 설정됨)
 2. 빌드 후 `dist`를 gh-pages 브랜치로 배포:
 
 ```bash
 npm run build
 npx gh-pages -d dist
 ```
+
+> **주의 (Windows)**: 프로젝트 경로에 한글이 포함되어 있으면(`0612 계산기` 등)
+> Node↔esbuild 프로세스 통신이 액세스 위반으로 크래시하여 `vite build`가 실패합니다.
+> ASCII 경로(예: `C:\Users\User\Desktop\mind-ledger-build`)에 소스를 복사한 뒤
+> `npm install --ignore-scripts && npm run build` 로 빌드하세요.
 
 ## CSV 형식
 
