@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <!-- 외부 스크립트/리소스 주입 차단: 같은 출처(self)의 코드만 실행 허용 -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'"
+    />
     <meta name="theme-color" content="#1B4D3E" />
     <meta name="description" content="덜 쓰게 만드는 건 의지가 아니라 설계 — 인지심리학 기반 가계부" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
